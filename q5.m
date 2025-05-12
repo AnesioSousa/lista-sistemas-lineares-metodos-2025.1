@@ -56,8 +56,14 @@ disp(X)
 % Verificando o resultado
 A_inv = inv(A);
 I = A * A_inv;
+
+% Exibir matriz inversa com melhor formatação
+disp('A matriz inversa encontrada:')
+fprintf('%.4f\t%.4f\t%.4f\n', A_inv');  % Transposta para exibir linha por linha
+
+% Exibir matriz identidade com melhor formatação
 disp('A matriz identidade resultante da multiplicação de A por sua inversa é:')
-disp(I)
+fprintf('%.4f\t%.4f\t%.4f\n', I');
 
 % Plotando o gráfico de convergência
 figure;
